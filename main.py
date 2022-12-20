@@ -57,12 +57,12 @@ def brain3 (cumulative_enemy_speed, cumulative_speed, x, y, next_checkpoint_x, n
             next_checkpoint_x = checkpoints[next_checkpoint_index][0]
             next_checkpoint_y = checkpoints[next_checkpoint_index][1]
 
-    if distance_to_checkpoint > 5100 and abs(next_checkpoint_angle) <5 and boost_ready:
+    if distance_to_checkpoint > 6000 and abs(next_checkpoint_angle) <3 and boost_ready:
         speed = "BOOST"
         boost_ready = False
-    elif abs(next_checkpoint_angle) > 60:
-        speed = 50
-    elif distance_to_enemy < 1000 and distance_to_checkpoint < 2000 and distance_enemy_to_checkpoint < distance_to_checkpoint:
+    elif abs(next_checkpoint_angle) > 90:
+        speed = 0
+    elif distance_to_enemy < 1000 and distance_to_checkpoint < 3000 and distance_enemy_to_checkpoint - 300 < distance_to_checkpoint:
         speed = "SHIELD"
 
     log = "S: " + str(speed) + " A: " + str(next_checkpoint_angle) + " D: " + str(distance_to_checkpoint) + " r: " + str(r) + " ES: " + str(cumulative_enemy_speed)
