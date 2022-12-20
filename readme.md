@@ -14,3 +14,6 @@
 
 # Leaderboard
 ![Leaderboard](Leaderboard.png)
+
+## All Leagues
+![League Levels](League_Levels.png)
